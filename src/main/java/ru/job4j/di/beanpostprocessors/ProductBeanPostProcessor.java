@@ -11,7 +11,7 @@ public class ProductBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName)
             throws BeansException {
         if (bean instanceof Product) {
-            Product product = (Product) bean; // explicit casting
+            Product product = (Product) bean;
             System.out.printf("3. BeanPostProcessBeforeInitialization: '%s'%n", product);
         }
         return bean;
@@ -20,7 +20,7 @@ public class ProductBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessAfterInitialization(Object bean, String beanName)
             throws BeansException {
         if (bean instanceof Product) {
-            Product product = (Product) bean; // explicit casting
+            Product product = (Product) bean;
             System.out.printf("5. BeanPostProcessAfterInitialization: '%s'%n", product);
         }
         return bean;
